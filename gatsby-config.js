@@ -1,8 +1,8 @@
 module.exports = {
 	siteMetadata: {
 		title: `Peng Yang Guo`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@PengYangGuo`,
+		description: ``,
+		author: `Peng Yang Guo`,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
@@ -29,14 +29,11 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-plugin-google-fonts`,
+			resolve: "gatsby-plugin-web-font-loader",
 			options: {
-				fonts: [
-					`Quicksand`,
-					`Comfortaa`,
-					`Montserrat`,
-				],
-				display: "swap",
+				google: {
+					families: ["Comfortaa", "Montserrat"],
+				},
 			},
 		},
 

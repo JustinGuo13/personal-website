@@ -7,13 +7,13 @@ html {
 
 body {
 	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: hsla(0, 0%, 0%, 0.8);
-	font-family: 'Montserrat';
+	background-color: #162e5d;
+	font-family: "Montserrat";
 	font-weight: 100;
 	word-wrap: break-word;
 	font-kerning: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	-moz-font-feature-settings: "kern", "liga", "clig", "calt";
 	-ms-font-feature-settings: "kern", "liga", "clig", "calt";
 	-webkit-font-feature-settings: "kern", "liga", "clig", "calt";

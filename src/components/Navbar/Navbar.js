@@ -6,15 +6,15 @@ import Logo from "./Logo"
 const Navigation = styled.nav`
 	height: 10vh;
 	display: flex;
-	background-color: #fff;
 	position: relative;
 	justify-content: space-between;
-	text-transform: uppercase;
-	border-bottom: 2px solid #33333320;
 	margin: 0 auto;
 	padding: 0 5vw;
 	z-index: 2;
 	align-self: center;
+	box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+	background-color: rgba(#142850, 0.15);
+	backdrop-filter: blur(10px);
 
 	@media (max-width: 768px) {
 		position: sticky;
@@ -49,7 +49,6 @@ const Navbox = styled.div`
 		width: 100%;
 		justify-content: flex-start;
 		padding-top: 10vh;
-		background-color: #fff;
 		transition: all 0.3s ease-in;
 		top: 8vh;
 		left: ${props => (props.open ? "-100%" : "0")};
@@ -57,7 +56,7 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-	background-color: #111;
+	background-color: #ffffff;
 	width: 30px;
 	height: 3px;
 	transition: all 0.3s linear;
@@ -69,7 +68,7 @@ const Hamburger = styled.div`
 	::after {
 		width: 30px;
 		height: 3px;
-		background-color: #111;
+		background-color: #ffffff;
 		content: "";
 		position: absolute;
 		transition: all 0.3s linear;

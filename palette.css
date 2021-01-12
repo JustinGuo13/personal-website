@@ -2,10 +2,11 @@
 
 .dark-primary-color    { background: #142850; }
 .default-primary-color { background: #27496d; }
-.light-primary-color   { background: #0c7b93; }
 .lighter-primary-color { background:#00a8cc;}
 .text-primary-color    { color: #FFFFFF; }
 .accent-color          { background: #03A9F4; }
 .divider-color         { border-color: #BDBDBD; }
 
 .lightest-primary-color { background:#23d7ff;}
+
+.light-primary-color { background:#34ffdd;}

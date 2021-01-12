@@ -19,20 +19,20 @@ const NavItem = styled(Link)`
 		width: 0%;
 		content: ".";
 		color: transparent;
-		background: #23d7ff;
+		background: #34ffdd;
 		height: 1px;
 		transition: all 0.4s ease-in;
 	}
 
 	&:hover {
-		color: #23d7ff;
+		color: #34ffdd;
 		&::after {
 			width: 100%;
 		}
 	}
 
 	&.active {
-		color: #23d7ff;
+		color: #34ffdd;
 	}
 
 	@media (max-width: 768px) {

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
@@ -58,7 +57,7 @@ const ResumeButton = styled.a`
 		background-color: #34ffdd14;
 		-webkit-transition: 0.3 ease-in-out;
 		-moz-transition: 0.3 ease-in-out;
-		-ms-transition:  0.3 ease-in-out;
+		-ms-transition: 0.3 ease-in-out;
 		-o-transition: 0.3 ease-in-out;
 		transition: 0.3s ease-in-out;
 	}
@@ -84,7 +83,6 @@ const IndexPage = () => {
 				{/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
 				<Image />
 			</div> */}
-				<Link to="/page-2/">Go to page 2</Link> <br />
 			</Container>
 		</Layout>
 	)

@@ -27,10 +27,6 @@ const Navigation = styled.nav`
 	}
 `
 
-// box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-// 	background-color: rgba(#142850, 0.15);
-// 	backdrop-filter: blur(10px);
-
 const Toggle = styled.div`
 	display: none;
 	height: 100%;
@@ -92,7 +88,9 @@ const Hamburger = styled.div`
 		top: 10px;
 	}
 `
+
 const Navbar = () => {
+	
 	const [navbarOpen, setNavbarOpen] = useState(false)
 
 	return (

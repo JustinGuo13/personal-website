@@ -9,15 +9,15 @@ const Navigation = styled.nav`
 	display: flex;
 	position: relative;
 	justify-content: space-between;
+	background-color: #162e5d;
+	box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 	margin: 0 auto;
 	padding: 0 5vw;
 	z-index: 2;
 	align-self: center;
-	box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-	background-color: rgba(#142850, 0.15);
-	backdrop-filter: blur(10px);
 
 	@media (max-width: 768px) {
+		position: -webkit-sticky;
 		position: sticky;
 		height: 8vh;
 		top: 0;
@@ -26,6 +26,10 @@ const Navigation = styled.nav`
 		left: 0;
 	}
 `
+
+// box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+// 	background-color: rgba(#142850, 0.15);
+// 	backdrop-filter: blur(10px);
 
 const Toggle = styled.div`
 	display: none;
@@ -45,6 +49,7 @@ const Navbox = styled.div`
 	align-items: center;
 
 	@media (max-width: 768px) {
+		background-color: #142850;
 		flex-direction: column;
 		position: fixed;
 		width: 100%;
@@ -52,12 +57,12 @@ const Navbox = styled.div`
 		padding-top: 10vh;
 		transition: all 0.3s ease-in;
 		top: 8vh;
-		left: ${props => (props.open ? "-100%" : "0")};
+		left: ${props => (props.open ? "100%" : "0")};
 	}
 `
 
 const Hamburger = styled.div`
-	background-color: #ffffff;
+	background-color: #34ffdd;
 	width: 30px;
 	height: 3px;
 	transition: all 0.3s linear;
@@ -69,7 +74,7 @@ const Hamburger = styled.div`
 	::after {
 		width: 30px;
 		height: 3px;
-		background-color: #ffffff;
+		background-color: #34ffdd;
 		content: "";
 		position: absolute;
 		transition: all 0.3s linear;

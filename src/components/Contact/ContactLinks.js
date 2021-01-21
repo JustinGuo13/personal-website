@@ -7,20 +7,40 @@ import { Linkedin } from "@styled-icons/feather/Linkedin"
 import { StyledIconBase } from "@styled-icons/styled-icon"
 
 const IconStyleWrapper = styled.div`
-	margin-top: 10%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 40vh;
+
 	${StyledIconBase} {
 		height: 10vh;
 		width: 10vh;
-		color: red;
+		color: #34ffdd;
+		margin: 1.25rem;
 		display: inline-block;
-		margin: 1rem;
+
+		/* icon float animation */
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+
+		&:hover,
+		&:focus,
+		&:active {
+			transform: translateY(-10px);
+		}
+	}
+
+	a {
+		
 	}
 `
 
 const ContactLinks = () => {
 	return (
 		<IconStyleWrapper>
-			<a href="https://github.com/PengYangGuo" target="_blank">
+			<a href="mailto:pyangguo@gmail.com">
 				<Email />
 			</a>
 

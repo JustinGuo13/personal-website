@@ -12,7 +12,7 @@ export const Container = styled.div`
 	align-items: center;
 	text-align: center;
 	margin-top: 1rem;
-	color:#fff;
+	color:#23d7ff;
 `
 const ContactPage = () => {
 	return (

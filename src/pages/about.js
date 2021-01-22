@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +12,7 @@ const AboutPage = () => {
 				<h1>About</h1>
 				<p>About page information</p>
 				<p>
-					<Link to="/contact">Contact me.</Link>
+					
 				</p>
 			</Container>
 		</Layout>

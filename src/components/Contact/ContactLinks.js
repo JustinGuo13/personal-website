@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Email } from "@styled-icons/material-outlined/Email"
+import { Mail as Email } from "@styled-icons/feather/Mail"
 import { Github } from "@styled-icons/feather/Github"
 import { Linkedin } from "@styled-icons/feather/Linkedin"
 import { StyledIconBase } from "@styled-icons/styled-icon"
@@ -15,11 +15,10 @@ const IconStyleWrapper = styled.div`
 	min-height: 40vh;
 
 	${StyledIconBase} {
+		display: inline-block;
 		height: 10vh;
 		width: 10vh;
 		color: #34ffdd;
-		margin: 1.25rem;
-		display: inline-block;
 
 		/* icon float animation */
 		transition-duration: 0.3s;
@@ -32,25 +31,35 @@ const IconStyleWrapper = styled.div`
 		}
 	}
 
-	a {
-		
+	li{
+		display: inline;
+		margin: 1.25rem;
+		list-style: none;
 	}
 `
 
 const ContactLinks = () => {
 	return (
 		<IconStyleWrapper>
-			<a href="mailto:pyangguo@gmail.com">
-				<Email />
-			</a>
+			<ul>
+				<li>
+					<a href="mailto:pyangguo@gmail.com">
+						<Email />
+					</a>
+				</li>
 
-			<a href="https://github.com/PengYangGuo" target="_blank">
-				<Github />
-			</a>
+				<li>
+					<a href="https://github.com/PengYangGuo" target="_blank">
+						<Github />
+					</a>
+				</li>
 
-			<a href="https://www.linkedin.com/in/pengyangguo/" target="_blank">
-				<Linkedin />
-			</a>
+				<li>
+					<a href="https://www.linkedin.com/in/pengyangguo/" target="_blank">
+						<Linkedin />
+					</a>
+				</li>
+			</ul>
 		</IconStyleWrapper>
 	)
 }

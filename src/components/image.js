@@ -15,10 +15,6 @@ import Img from "gatsby-image"
  */
 
 const ImgWrapper = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
 	/* nesting */
 	.gatsby-image-wrapper {
 		width: 300px;

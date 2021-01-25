@@ -2,15 +2,15 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container } from "../pages/contact"
+import { StyledTitle } from "../pages/contact"
 
 const BlogPage = () => {
 	return (
 		<Layout>
 			<SEO title="Blog" />
-			<Container>
+			<StyledTitle>
 				<h1>Blog</h1>
-			</Container>
+			</StyledTitle>
 		</Layout>
 	)
 }

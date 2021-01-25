@@ -8,7 +8,7 @@ const Button = styled.button`
 	font-weight: 600;
 	font-size: 0.8rem;
 	letter-spacing: 0.1rem;
-	padding: 1rem;
+	padding: 1.2rem;
 	border-radius: 0.5rem;
 	background: transparent;
 	border: 0.1rem solid #34ffdd;

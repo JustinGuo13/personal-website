@@ -11,6 +11,7 @@ const Container = styled.div`
 	margin-top: 5%;
 
 	h4 {
+		
 		color: #34ffdd;
 		font-weight: 100;
 		letter-spacing: 0.1rem;
@@ -18,6 +19,7 @@ const Container = styled.div`
 	}
 
 	h1 {
+		font-size: 3rem;
 		color: #23d7ff;
 		letter-spacing: 0.1rem;
 		margin-bottom: 1rem;
@@ -33,7 +35,7 @@ const Container = styled.div`
 	p {
 		color: #fff;
 		letter-spacing: 0.1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 	}
 `
 
@@ -43,8 +45,8 @@ const ResumeButton = styled.a`
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 	text-decoration: none;
-	margin-left: 0.8rem;
-	padding: 1rem;
+	margin-left: 1rem;
+	padding: 1.2rem;
 	border-radius: 0.5rem;
 	background: transparent;
 	border: 0.1rem solid #34ffdd;
@@ -80,9 +82,7 @@ const IndexPage = () => {
 				>
 					Resume
 				</ResumeButton>
-				{/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-				<Image />
-			</div> */}
+				
 			</Container>
 		</Layout>
 	)

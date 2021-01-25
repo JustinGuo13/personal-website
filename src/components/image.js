@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -13,24 +14,39 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
+const ImgWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* nesting */
+	.gatsby-image-wrapper {
+		width: 300px;
+	}
+`
+
 const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+	const data = useStaticQuery(graphql`
+		query {
+			placeholderImage: file(relativePath: { eq: "portrait.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 300) {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+		}
+	`)
 
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
-    return <div>Picture not found</div>
-  }
+	if (!data?.placeholderImage?.childImageSharp?.fluid) {
+		return <div>Picture not found</div>
+	}
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+	return (
+		<ImgWrapper>
+			<Img fluid={data.placeholderImage.childImageSharp.fluid} />
+		</ImgWrapper>
+	)
 }
 
 export default Image

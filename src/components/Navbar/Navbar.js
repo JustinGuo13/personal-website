@@ -9,7 +9,7 @@ const Navigation = styled.nav`
 	display: flex;
 	position: relative;
 	justify-content: space-between;
-	background-color: #162e5d;
+	background-color: #0a192f;
 	box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 	margin: 0 auto;
 	padding: 0 5vw;
@@ -45,7 +45,7 @@ const Navbox = styled.div`
 	align-items: center;
 
 	@media (max-width: 768px) {
-		background-color: #142850;
+		background-color: #112240;
 		flex-direction: column;
 		position: fixed;
 		width: 100%;

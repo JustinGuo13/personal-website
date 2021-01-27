@@ -28,11 +28,18 @@ const StyledText = styled.div`
 		font-size: 1.1rem;
 		color: #fff;
 	}
+	ul {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(140px, 200px));
+		padding: 0px;
+		margin-top: .5rem;
+		overflow: hidden;
+		list-style: none;
+	}
 
 	li {
-		margin: 1rem 0;
+		margin: .2rem;
 		color: #fff;
-		list-style: none;
 	}
 
 	li::before {

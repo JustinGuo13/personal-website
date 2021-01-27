@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { StyledTitle } from "../pages/contact"
+import Card from "../components/Projects/Card"
 
 const ProjectsPage = () => {
 	return (
@@ -10,7 +11,9 @@ const ProjectsPage = () => {
 			<SEO title="Projects" />
 			<StyledTitle>
 				<h1>Projects</h1>
+				
 			</StyledTitle>
+			<Card/>
 		</Layout>
 	)
 }

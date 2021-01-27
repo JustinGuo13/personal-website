@@ -11,6 +11,7 @@ const Container = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	margin-top: 5vh;
+	gap: 20px;
 `
 const StyledText = styled.div`
 	display: flex;
@@ -18,10 +19,12 @@ const StyledText = styled.div`
 
 	p {
 		display: block;
-		margin-block-start: 1rem;
-		margin-block-end: 1rem;
+		margin-block-start: 0.6rem;
+		margin-block-end: 0.6rem;
 		margin-inline-start: 0px;
 		margin-inline-end: 0px;
+		letter-spacing: 0.01rem;
+		line-height: 1.6rem;
 		font-size: 1.1rem;
 		color: #fff;
 	}
@@ -34,6 +37,8 @@ const StyledText = styled.div`
 
 	li::before {
 		content: "▹";
+		color: #34ffdd;
+		margin-right: 0.5rem;
 	}
 `
 const StyledImage = styled.div`

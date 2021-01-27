@@ -45,7 +45,7 @@ const Navbox = styled.div`
 	align-items: center;
 
 	@media (max-width: 768px) {
-		background-color: #112240;
+		background-color: #0c1e3a;
 		flex-direction: column;
 		position: fixed;
 		width: 100%;

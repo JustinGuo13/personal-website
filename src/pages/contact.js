@@ -12,7 +12,12 @@ export const StyledTitle = styled.div`
 	align-items: center;
 	text-align: center;
 	margin-top: 1rem;
-	color: #23d7ff;
+	color: #34ffdd;
+
+	p {
+		margin-top: 1rem;
+		color: #fff;
+	}
 `
 const ContactPage = () => {
 	return (
@@ -20,7 +25,7 @@ const ContactPage = () => {
 			<SEO title="Contact" />
 			<StyledTitle>
 				<h1>Contact</h1>
-				<p>Contact information</p>
+				<p>You can reach me via email below for any inquiries. </p>
 			</StyledTitle>
 
 			<ContactLinks />

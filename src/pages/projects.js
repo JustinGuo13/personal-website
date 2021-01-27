@@ -10,7 +10,6 @@ const ProjectsPage = () => {
 			<SEO title="Projects" />
 			<StyledTitle>
 				<h1>Projects</h1>
-				<p>Projects information</p>
 			</StyledTitle>
 		</Layout>
 	)

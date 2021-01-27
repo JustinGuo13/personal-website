@@ -16,6 +16,7 @@ import Img from "gatsby-image"
 
 const ImgWrapper = styled.div`
 	/* nesting */
+
 	.gatsby-image-wrapper {
 		width: 300px;
 	}

@@ -3,7 +3,8 @@ import styled from "styled-components"
 const CardContent = () => {
 	return (
 		<div>
-			
+			<h3></h3>
+			<p></p>
 		</div>
 	)
 }

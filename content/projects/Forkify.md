@@ -8,4 +8,6 @@ tech:
   - Babel
   - Webpack
   - Forkify-API
+
+![Forkify](./project1.png)
 ---

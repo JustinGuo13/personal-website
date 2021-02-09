@@ -17,10 +17,21 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `projects`,
-				path: `${__dirname}/src/content/projects`,
+				path: `${__dirname}/content/projects`,
 			},
 		},
-		`gatsby-transformer-remark`,
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					`gatsby-remark-relative-images`,
+					{
+						resolve: `gatsby-remark-images`,
+						options: { maxWidth: 600, linkImagesToOriginal: false },
+					},
+				],
+			},
+		},
 		`gatsby-transformer-sharp`,
 		"gatsby-plugin-styled-components",
 		`gatsby-plugin-sharp`,

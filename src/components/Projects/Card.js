@@ -1,6 +1,42 @@
 import React from "react"
+import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { Github } from "@styled-icons/feather/Github"
+import { ExternalLink } from "@styled-icons/feather/ExternalLink"
+import { StyledIconBase } from "@styled-icons/styled-icon"
+
+const ProjectCard = styled.div`
+	border: solid red;
+`
+
+const Content = styled.div``
+
+const IconStyleWrapper = styled.div`
+	
+	${StyledIconBase} {
+		display: inline-block;
+		height: 10vh;
+		width: 10vh;
+		color: #34ffdd;
+
+		/* icon float animation */
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+
+		&:hover,
+		&:focus,
+		&:active {
+			transform: translateY(-10px);
+		}
+	}
+
+	li {
+		display: inline;
+		margin: 1.25rem;
+		list-style: none;
+	}
+`
 
 const Card = () => {
 	const data = useStaticQuery(graphql`
@@ -30,24 +66,34 @@ const Card = () => {
 		}
 	`)
 
-	
 	return (
 		<div>
-			<ul>
-				
-				{data.allMarkdownRemark.edges.map(({ node}) => {
-					return (
-						<div key={node.id}>
+			{data.allMarkdownRemark.edges.map(({ node }) => {
+				return (
+					<ProjectCard key={node.id}>
+						<Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+						<Content>
 							<h2>{node.frontmatter.title}</h2>
-							<Img fluid={node.frontmatter.image.childImageSharp.fluid} />
 							<p>{node.frontmatter.description}</p>
-							<a>{node.frontmatter.external}</a>
-							<a>{node.frontmatter.github}</a>
 							<li>{node.frontmatter.tech}</li>
-						</div>
-					)
-				})}
-			</ul>
+							<IconStyleWrapper>
+								<ul>
+									<li>
+										<a href={node.frontmatter.external}>
+											<ExternalLink />
+										</a>
+									</li>
+									<li>
+										<a href={node.frontmatter.github}>
+											<Github />
+										</a>
+									</li>
+								</ul>
+							</IconStyleWrapper>
+						</Content>
+					</ProjectCard>
+				)
+			})}
 		</div>
 	)
 }

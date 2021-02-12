@@ -7,17 +7,45 @@ import { ExternalLink } from "@styled-icons/feather/ExternalLink"
 import { StyledIconBase } from "@styled-icons/styled-icon"
 
 const ProjectCard = styled.div`
-	border: solid red;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 300px 1fr auto;
+	background: #fff;
+	border-radius: 10px;
+	margin: 10rem;
+	color: #101010;
+`
+const StyledImg = styled(Img)`
+	grid-column: 1 / 3;
+	grid-row: 1 / 2;
 `
 
-const Content = styled.div``
+const Wrapper = styled.figure``
+
+const WrappedImg = props => (
+	<Wrapper>
+		<StyledImg {...props} />
+	</Wrapper>
+)
+
+const Content = styled.div`
+	grid-column: 1 / 3;
+	grid-row: 2 /3;
+	padding: 1rem;
+`
+const Title = styled.h2``
+const Description = styled.p``
+
+const TechList = styled.li`
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+`
 
 const IconStyleWrapper = styled.div`
-	
 	${StyledIconBase} {
 		display: inline-block;
-		height: 10vh;
-		width: 10vh;
+		width: 5%;
+		height: auto;
 		color: #34ffdd;
 
 		/* icon float animation */
@@ -52,9 +80,10 @@ const Card = () => {
 							title
 							image {
 								childImageSharp {
-									fluid(maxWidth: 600, pngQuality: 90) {
+									fluid(maxWidth: 1920, pngQuality: 100) {
 										originalName
 										...GatsbyImageSharpFluid
+										...GatsbyImageSharpFluidLimitPresentationSize
 									}
 								}
 							}
@@ -71,26 +100,27 @@ const Card = () => {
 			{data.allMarkdownRemark.edges.map(({ node }) => {
 				return (
 					<ProjectCard key={node.id}>
-						<Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+						<StyledImg fluid={node.frontmatter.image.childImageSharp.fluid} />
+
 						<Content>
-							<h2>{node.frontmatter.title}</h2>
-							<p>{node.frontmatter.description}</p>
-							<li>{node.frontmatter.tech}</li>
-							<IconStyleWrapper>
-								<ul>
-									<li>
-										<a href={node.frontmatter.external}>
-											<ExternalLink />
-										</a>
-									</li>
-									<li>
-										<a href={node.frontmatter.github}>
-											<Github />
-										</a>
-									</li>
-								</ul>
-							</IconStyleWrapper>
+							<Title>{node.frontmatter.title}</Title>
+							<Description>{node.frontmatter.description}</Description>
 						</Content>
+						<TechList>{node.frontmatter.tech}</TechList>
+						<IconStyleWrapper>
+							<ul>
+								<li>
+									<a href={node.frontmatter.external}>
+										<ExternalLink />
+									</a>
+								</li>
+								<li>
+									<a href={node.frontmatter.github}>
+										<Github />
+									</a>
+								</li>
+							</ul>
+						</IconStyleWrapper>
 					</ProjectCard>
 				)
 			})}

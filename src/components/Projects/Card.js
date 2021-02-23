@@ -6,20 +6,32 @@ import { Github } from "@styled-icons/feather/Github"
 import { ExternalLink } from "@styled-icons/feather/ExternalLink"
 import { StyledIconBase } from "@styled-icons/styled-icon"
 
+import { device } from "../device"
+
 const ProjectCard = styled.div`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 300px 1fr auto;
 	background: #fff;
 	border-radius: 10px;
-	margin: 5rem;
+	margin: 10rem;
 	color: #101010;
+
+	@media ${device.tabletL} {
+		grid-template-columns: 300px repeat(2, 1fr);
+		grid-template-rows: 1fr auto;
+	}
 `
 
 const StyledImg = styled(Img)`
 	grid-column: 1 / 3;
 	grid-row: 1 / 2;
 	background: no-repeat center center/cover;
+
+	@media ${device.tabletL} {
+		grid-column: 1 / 2;
+		grid-row: 1 / 3;
+	}
 `
 
 const Wrapper = styled.figure``
@@ -34,6 +46,11 @@ const Content = styled.div`
 	grid-column: 1 / 3;
 	grid-row: 2 /3;
 	padding: 1.5rem;
+
+	@media ${device.tabletL} {
+		grid-column: 2 / 4;
+		grid-row: 1 / 2;
+	}
 `
 const Title = styled.h2`
 	font-size: 1.75rem;
@@ -46,11 +63,19 @@ const Description = styled.p`
 	margin-bottom: 0.75rem;
 `
 
-const TechList = styled.li`
+const TechList = styled.ul`
 	grid-column: 1 / 2;
 	grid-row: 3 / 4;
 	padding-bottom: 1.5rem;
 	padding-left: 1.5rem;
+
+	li {
+		list-style: none;
+	}
+	@media ${device.tabletL} {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+	}
 `
 
 const IconStyleWrapper = styled.div`
@@ -121,7 +146,16 @@ const Card = () => {
 							<Title>{node.frontmatter.title}</Title>
 							<Description>{node.frontmatter.description}</Description>
 						</Content>
-						<TechList>{node.frontmatter.tech}</TechList>
+
+						<TechList>
+							{node.frontmatter.tech.map((tech, i) => [
+								<strong key={i}>
+									{tech}
+									{i < node.frontmatter.tech.length - 1 ? " " : ""}
+								</strong>,
+							])}
+						</TechList>
+
 						<IconStyleWrapper>
 							<ul>
 								<li>

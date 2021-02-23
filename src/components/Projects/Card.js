@@ -12,12 +12,14 @@ const ProjectCard = styled.div`
 	grid-template-rows: 300px 1fr auto;
 	background: #fff;
 	border-radius: 10px;
-	margin: 10rem;
+	margin: 5rem;
 	color: #101010;
 `
+
 const StyledImg = styled(Img)`
 	grid-column: 1 / 3;
 	grid-row: 1 / 2;
+	background: no-repeat center center/cover;
 `
 
 const Wrapper = styled.figure``
@@ -31,20 +33,30 @@ const WrappedImg = props => (
 const Content = styled.div`
 	grid-column: 1 / 3;
 	grid-row: 2 /3;
-	padding: 1rem;
+	padding: 1.5rem;
 `
-const Title = styled.h2``
-const Description = styled.p``
+const Title = styled.h2`
+	font-size: 1.75rem;
+	line-height: 1.1;
+	margin-bottom: 0.75rem;
+`
+const Description = styled.p`
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 0.75rem;
+`
 
 const TechList = styled.li`
 	grid-column: 1 / 2;
 	grid-row: 3 / 4;
+	padding-bottom: 1.5rem;
+	padding-left: 1.5rem;
 `
 
 const IconStyleWrapper = styled.div`
 	${StyledIconBase} {
 		display: inline-block;
-		width: 5%;
+		width: 10%;
 		height: auto;
 		color: #34ffdd;
 
@@ -57,6 +69,10 @@ const IconStyleWrapper = styled.div`
 		&:active {
 			transform: translateY(-10px);
 		}
+	}
+	ul {
+		padding-bottom: 1.5rem;
+		padding-right: 1.5rem;
 	}
 
 	li {
@@ -101,7 +117,6 @@ const Card = () => {
 				return (
 					<ProjectCard key={node.id}>
 						<StyledImg fluid={node.frontmatter.image.childImageSharp.fluid} />
-
 						<Content>
 							<Title>{node.frontmatter.title}</Title>
 							<Description>{node.frontmatter.description}</Description>

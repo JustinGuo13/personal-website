@@ -8,13 +8,16 @@ import { StyledIconBase } from "@styled-icons/styled-icon"
 
 import { device } from "../device"
 
+const CardWrapper = styled.div`
+	display: grid;
+`
 const ProjectCard = styled.div`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 300px 1fr auto;
 	background: #fff;
 	border-radius: 10px;
-	margin: 1rem 2rem;
+	margin: 2rem;
 	color: #101010;
 
 	@media ${device.mobileXL} {
@@ -100,7 +103,7 @@ const TechList = styled.ul`
 
 const IconStyleWrapper = styled.div`
 	@media ${device.mobileXL} {
-		grid-column: 3 / 4;
+		grid-column: 2 / 4;
 		grid-row: 3 / 4;
 	}
 
@@ -111,8 +114,8 @@ const IconStyleWrapper = styled.div`
 
 	${StyledIconBase} {
 		display: inline-block;
-		width: 10%;
-		height: auto;
+		width: 25px;
+		height: 25px;
 		color: #34ffdd;
 
 		/* icon float animation */
@@ -126,6 +129,9 @@ const IconStyleWrapper = styled.div`
 		}
 	}
 	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
 		padding-bottom: 1.5rem;
 		padding-right: 1.5rem;
 	}
@@ -167,7 +173,7 @@ const Card = () => {
 	`)
 
 	return (
-		<div>
+		<CardWrapper>
 			{data.allMarkdownRemark.edges.map(({ node }) => {
 				return (
 					<ProjectCard key={node.id}>
@@ -203,7 +209,7 @@ const Card = () => {
 					</ProjectCard>
 				)
 			})}
-		</div>
+		</CardWrapper>
 	)
 }
 

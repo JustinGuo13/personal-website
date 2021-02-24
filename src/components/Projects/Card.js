@@ -14,12 +14,16 @@ const ProjectCard = styled.div`
 	grid-template-rows: 300px 1fr auto;
 	background: #fff;
 	border-radius: 10px;
-	margin: 10rem;
+	margin: 1rem 2rem;
 	color: #101010;
 
-	@media ${device.tabletL} {
-		grid-template-columns: 300px repeat(2, 1fr);
+	@media ${device.mobileXL} {
+		grid-template-columns: 200px repeat(2, 1fr);
 		grid-template-rows: 1fr auto;
+	}
+
+	@media ${device.tabletM} {
+		grid-template-columns: 350px repeat(2, 1fr);
 	}
 `
 
@@ -28,7 +32,12 @@ const StyledImg = styled(Img)`
 	grid-row: 1 / 2;
 	background: no-repeat center center/cover;
 
-	@media ${device.tabletL} {
+	@media ${device.mobileXL} {
+		grid-column: 1 / 4;
+		grid-row: 1 / 2;
+	}
+
+	@media ${device.tabletM} {
 		grid-column: 1 / 2;
 		grid-row: 1 / 3;
 	}
@@ -47,7 +56,12 @@ const Content = styled.div`
 	grid-row: 2 /3;
 	padding: 1.5rem;
 
-	@media ${device.tabletL} {
+	@media ${device.mobileXL} {
+		grid-column: 1 / 4;
+		grid-row: 2 / 3;
+	}
+
+	@media ${device.tabletM} {
 		grid-column: 2 / 4;
 		grid-row: 1 / 2;
 	}
@@ -72,13 +86,29 @@ const TechList = styled.ul`
 	li {
 		list-style: none;
 	}
-	@media ${device.tabletL} {
+
+	@media ${device.mobileXL} {
+		grid-column: 1 / 2;
+		grid-row: 3 / 4;
+	}
+
+	@media ${device.tabletM} {
 		grid-column: 2 / 3;
 		grid-row: 2 / 3;
 	}
 `
 
 const IconStyleWrapper = styled.div`
+	@media ${device.mobileXL} {
+		grid-column: 3 / 4;
+		grid-row: 3 / 4;
+	}
+
+	@media ${device.tabletM} {
+		grid-column: 3 / 4;
+		grid-row: 2 / 3;
+	}
+
 	${StyledIconBase} {
 		display: inline-block;
 		width: 10%;

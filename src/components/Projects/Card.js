@@ -10,20 +10,20 @@ import { device } from "../device"
 
 const CardWrapper = styled.div`
 	display: grid;
-	max-width: 960px;
+	max-width: 1080px;
 	margin: 0 auto;
 `
 const ProjectCard = styled.div`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 300px 1fr auto;
-	background: #fff;
+	background: #101010;
 	border-radius: 10px;
 	margin: 2rem;
-	color: #101010;
+	color: #fff;
 
 	@media ${device.mobileS} {
-		grid-template-columns: 160px 160px;
+		grid-template-columns: 160px repeat(2, 1fr);
 		grid-template-rows: 1fr auto;
 	}
 
@@ -33,7 +33,7 @@ const ProjectCard = styled.div`
 	}
 
 	@media ${device.tabletM} {
-		grid-template-columns: 350px repeat(2, 1fr);
+		grid-template-columns: 500px repeat(2, 1fr);
 		grid-template-rows: 1fr auto;
 	}
 `
@@ -88,14 +88,15 @@ const Content = styled.div`
 	}
 `
 const Title = styled.h2`
-	font-size: 1.75rem;
-	line-height: 1.1;
-	margin-bottom: 0.75rem;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	white-space: normal;
+	overflow: visible;
 `
 const Description = styled.p`
 	font-size: 1rem;
 	line-height: 1.5;
-	margin-bottom: 0.75rem;
+	margin-bottom: 1rem;
 `
 
 const TechList = styled.ul`
@@ -131,7 +132,7 @@ const IconStyleWrapper = styled.div`
 	}
 
 	@media ${device.mobileXL} {
-		grid-column: 3 / 4;
+		grid-column: 2 / 4;
 		grid-row: 3 / 4;
 	}
 

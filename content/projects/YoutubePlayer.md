@@ -1,5 +1,5 @@
 ---
-title: "YoutubePlayer"
+title: "Youtube Player"
 image: "./images/YoutubePlayer.png"
 description: "A video player using Youtube API."
 github: "https://github.com/PengYangGuo/youtube-player"

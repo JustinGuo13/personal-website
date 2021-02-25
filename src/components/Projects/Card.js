@@ -10,6 +10,8 @@ import { device } from "../device"
 
 const CardWrapper = styled.div`
 	display: grid;
+	max-width: 960px;
+	margin: 0 auto;
 `
 const ProjectCard = styled.div`
 	display: grid;
@@ -20,6 +22,11 @@ const ProjectCard = styled.div`
 	margin: 2rem;
 	color: #101010;
 
+	@media ${device.mobileS} {
+		grid-template-columns: 160px 160px;
+		grid-template-rows: 1fr auto;
+	}
+
 	@media ${device.mobileXL} {
 		grid-template-columns: 200px repeat(2, 1fr);
 		grid-template-rows: 1fr auto;
@@ -27,6 +34,7 @@ const ProjectCard = styled.div`
 
 	@media ${device.tabletM} {
 		grid-template-columns: 350px repeat(2, 1fr);
+		grid-template-rows: 1fr auto;
 	}
 `
 
@@ -34,6 +42,11 @@ const StyledImg = styled(Img)`
 	grid-column: 1 / 3;
 	grid-row: 1 / 2;
 	background: no-repeat center center/cover;
+
+	@media ${device.mobileS} {
+		grid-column: 1 / 4;
+		grid-row: 1 / 2;
+	}
 
 	@media ${device.mobileXL} {
 		grid-column: 1 / 4;
@@ -58,6 +71,11 @@ const Content = styled.div`
 	grid-column: 1 / 3;
 	grid-row: 2 /3;
 	padding: 1.5rem;
+
+	@media ${device.mobileS} {
+		grid-column: 1 / 4;
+		grid-row: 2 / 3;
+	}
 
 	@media ${device.mobileXL} {
 		grid-column: 1 / 4;
@@ -90,6 +108,11 @@ const TechList = styled.ul`
 		list-style: none;
 	}
 
+	@media ${device.mobileS} {
+		grid-column: 1 / 2;
+		grid-row: 3 / 4;
+	}
+
 	@media ${device.mobileXL} {
 		grid-column: 1 / 2;
 		grid-row: 3 / 4;
@@ -102,8 +125,13 @@ const TechList = styled.ul`
 `
 
 const IconStyleWrapper = styled.div`
-	@media ${device.mobileXL} {
+	@media ${device.mobileS} {
 		grid-column: 2 / 4;
+		grid-row: 3 / 4;
+	}
+
+	@media ${device.mobileXL} {
+		grid-column: 3 / 4;
 		grid-row: 3 / 4;
 	}
 
@@ -114,6 +142,7 @@ const IconStyleWrapper = styled.div`
 
 	${StyledIconBase} {
 		display: inline-block;
+
 		width: 25px;
 		height: 25px;
 		color: #34ffdd;
@@ -128,17 +157,11 @@ const IconStyleWrapper = styled.div`
 			transform: translateY(-10px);
 		}
 	}
-	ul {
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-		padding-bottom: 1.5rem;
-		padding-right: 1.5rem;
-	}
 
 	li {
 		display: inline;
-		margin: 1.25rem;
+		float: center;
+		margin-right: 1rem;
 		list-style: none;
 	}
 `

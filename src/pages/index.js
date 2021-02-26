@@ -11,7 +11,6 @@ const Container = styled.div`
 	margin-top: 5%;
 
 	h4 {
-		
 		color: #34ffdd;
 		font-weight: 100;
 		letter-spacing: 0.1rem;
@@ -45,8 +44,7 @@ const ResumeButton = styled.a`
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 	text-decoration: none;
-	margin-left: 1rem;
-	padding: 1.2rem;
+	padding: 1.2rem 2.1rem;
 	border-radius: 0.5rem;
 	background: transparent;
 	border: 0.1rem solid #34ffdd;
@@ -82,7 +80,6 @@ const IndexPage = () => {
 				>
 					Resume
 				</ResumeButton>
-				
 			</Container>
 		</Layout>
 	)

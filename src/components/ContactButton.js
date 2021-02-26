@@ -2,8 +2,12 @@ import React from "react"
 import { navigate } from "gatsby"
 import styled from "styled-components"
 
+import device from "../components/device"
+
 const Button = styled.button`
 	display: inline-block;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
 	font-family: "Montserrat";
 	font-weight: 600;
 	font-size: 0.8rem;

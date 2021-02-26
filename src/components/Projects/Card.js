@@ -21,6 +21,7 @@ const ProjectCard = styled.div`
 	border-radius: 10px;
 	margin: 2rem;
 	color: #fff;
+	box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.5);
 
 	@media ${device.mobileS} {
 		grid-template-columns: 160px repeat(2, 1fr);

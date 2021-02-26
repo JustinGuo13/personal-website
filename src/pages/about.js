@@ -7,23 +7,16 @@ import { StyledTitle } from "../pages/contact"
 import Image from "../components/image"
 
 const Container = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 5vh;
-	gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	align-items: center;
+	justify-items: center;
+	color: #fff;
 `
 const StyledText = styled.div`
-	display: flex;
-	flex-direction: column;
-
 	p {
-		display: block;
-		margin-block-start: 0.6rem;
-		margin-block-end: 0.6rem;
-		margin-inline-start: 0px;
-		margin-inline-end: 0px;
-		letter-spacing: 0.01rem;
+		margin: 1rem;
+		letter-spacing: 0.1rem;
 		line-height: 1.6rem;
 		font-size: 1.1rem;
 		color: #fff;
@@ -32,13 +25,14 @@ const StyledText = styled.div`
 		display: grid;
 		grid-template-columns: repeat(2, minmax(140px, 200px));
 		padding: 0px;
-		margin-top: .5rem;
+		margin-top: 0.5rem;
 		overflow: hidden;
 		list-style: none;
 	}
 
 	li {
-		margin: .2rem;
+		margin: 0.2rem;
+		letter-spacing: 0.1rem;
 		color: #fff;
 	}
 
@@ -48,9 +42,7 @@ const StyledText = styled.div`
 		margin-right: 0.5rem;
 	}
 `
-const StyledImage = styled.div`
-	float: right;
-`
+const StyledImage = styled.div``
 
 const AboutPage = () => {
 	return (
@@ -59,6 +51,7 @@ const AboutPage = () => {
 			<StyledTitle>
 				<h1>About me</h1>
 			</StyledTitle>
+
 			<Container>
 				<StyledText>
 					<p>

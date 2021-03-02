@@ -1,4 +1,5 @@
 ---
+date: "2020-01-02"
 title: "Omnifood"
 image: "./images/Omnifood.png"
 description: "A mock website advertising a theoretical food-delivery app."

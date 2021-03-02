@@ -8,8 +8,9 @@ import Image from "../components/image"
 
 const Container = styled.div`
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	align-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	padding: 2rem;
+	align-items: top;
 	justify-items: center;
 	color: #fff;
 `

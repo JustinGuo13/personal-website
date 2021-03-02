@@ -21,7 +21,7 @@ const ProjectCard = styled.div`
 	border-radius: 10px;
 	margin: 2rem;
 	color: #fff;
-	box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.5);
+	box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.5);
 
 	@media ${device.mobileS} {
 		grid-template-columns: 160px repeat(2, 1fr);
@@ -171,10 +171,11 @@ const IconStyleWrapper = styled.div`
 const Card = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			allMarkdownRemark {
+			allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
 				edges {
 					node {
 						frontmatter {
+							date
 							description
 							external
 							github
@@ -210,10 +211,10 @@ const Card = () => {
 
 						<TechList>
 							{node.frontmatter.tech.map((tech, i) => [
-								<strong key={i}>
+								<li key={i}>
 									{tech}
-									{i < node.frontmatter.tech.length - 1 ? " " : ""}
-								</strong>,
+									{i < node.frontmatter.tech.length - 1 ? " " : " "}
+								</li>,
 							])}
 						</TechList>
 

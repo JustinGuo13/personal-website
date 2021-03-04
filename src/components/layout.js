@@ -7,20 +7,18 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import "./layout.css"
 import Navbar from "./Navbar/Navbar"
 
 const Footer = styled.footer`
-	margin-top: auto;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
-	padding-bottom: 1.875rem;
-	padding-top: 3.5rem;
+	margin: 0 auto;
+	padding: 1rem;
+`
+
+const SiteContent = styled.main`
+	flex: 1;
 `
 const StyledContent = styled.div`
 	display: flex;
@@ -29,27 +27,14 @@ const StyledContent = styled.div`
 `
 
 const Layout = ({ children }) => {
-	const data = useStaticQuery(graphql`
-		query SiteTitleQuery {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-	`)
-
 	return (
 		<>
 			<Navbar />
 
 			<StyledContent>
-				<main>{children}</main>
-				<Footer>
-					© {new Date().getFullYear()}, Built with
-					{` `}
-					<a href="https://www.gatsbyjs.com">Gatsby</a>
-				</Footer>
+				<SiteContent>{children}</SiteContent>
+
+				<Footer>© {new Date().getFullYear()}, Built by Peng Yang Guo</Footer>
 			</StyledContent>
 		</>
 	)

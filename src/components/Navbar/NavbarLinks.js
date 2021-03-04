@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const NavItem = styled(Link)`
+const NavItem = styled(AniLink)`
 	text-decoration: none;
 	color: #ffffff;
 	display: inline-block;
@@ -35,7 +35,7 @@ const NavItem = styled(Link)`
 		color: #34ffdd;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 48em) {
 		padding: 20px 0;
 		font-size: 1.5rem;
 		z-index: 6;
@@ -45,19 +45,19 @@ const NavItem = styled(Link)`
 const NavbarLinks = () => {
 	return (
 		<>
-			<NavItem to="/" activeClassName="active">
+			<NavItem paintDrip to="/" hex="#34ffdd" duration={0.8}>
 				Home
 			</NavItem>
-			<NavItem to="/about" activeClassName="active">
+			<NavItem paintDrip to="/about" hex="#34ffdd" duration={0.8}>
 				About
 			</NavItem>
-			<NavItem to="/projects" activeClassName="active">
+			<NavItem paintDrip to="/projects" hex="#34ffdd" duration={0.8}>
 				Projects
 			</NavItem>
-			<NavItem to="/contact" activeClassName="active">
+			<NavItem paintDrip to="/contact" hex="#34ffdd" duration={0.8}>
 				Contact
 			</NavItem>
-			<NavItem to="/blog" activeClassName="active">
+			<NavItem paintDrip to="/blog" hex="#34ffdd" duration={0.8}>
 				Blog
 			</NavItem>
 		</>

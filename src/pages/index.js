@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -71,7 +72,10 @@ const IndexPage = () => {
 				<h1>Peng Yang Guo.</h1>
 				<h3>I'm a front end developer based in Los Angeles, CA.</h3>
 				<p>Need a developer?</p>
-				<ContactButton path={`/contact`} description={`Contact me`} />
+				<AniLink paintDrip to="/contact" hex="#34ffdd" duration={0.8}>
+					<ContactButton path={`/contact`} description={`Contact me`} />
+				</AniLink>
+
 				<ResumeButton
 					href="/resume.pdf"
 					target="_blank"

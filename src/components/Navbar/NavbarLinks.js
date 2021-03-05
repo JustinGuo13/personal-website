@@ -45,19 +45,49 @@ const NavItem = styled(AniLink)`
 const NavbarLinks = () => {
 	return (
 		<>
-			<NavItem paintDrip to="/" hex="#34ffdd" duration={0.8}>
+			<NavItem
+				paintDrip
+				to="/"
+				hex="#34ffdd"
+				duration={0.8}
+				activeClassName="active"
+			>
 				Home
 			</NavItem>
-			<NavItem paintDrip to="/about" hex="#34ffdd" duration={0.8}>
+			<NavItem
+				paintDrip
+				to="/about"
+				hex="#34ffdd"
+				duration={0.8}
+				activeClassName="active"
+			>
 				About
 			</NavItem>
-			<NavItem paintDrip to="/projects" hex="#34ffdd" duration={0.8}>
+			<NavItem
+				paintDrip
+				to="/projects"
+				hex="#34ffdd"
+				duration={0.8}
+				activeClassName="active"
+			>
 				Projects
 			</NavItem>
-			<NavItem paintDrip to="/contact" hex="#34ffdd" duration={0.8}>
+			<NavItem
+				paintDrip
+				to="/contact"
+				hex="#34ffdd"
+				duration={0.8}
+				activeClassName="active"
+			>
 				Contact
 			</NavItem>
-			<NavItem paintDrip to="/blog" hex="#34ffdd" duration={0.8}>
+			<NavItem
+				paintDrip
+				to="/blog"
+				hex="#34ffdd"
+				duration={0.8}
+				activeClassName="active"
+			>
 				Blog
 			</NavItem>
 		</>

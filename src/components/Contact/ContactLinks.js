@@ -31,7 +31,7 @@ const IconStyleWrapper = styled.div`
 		}
 	}
 
-	li{
+	li {
 		display: inline;
 		margin: 1.25rem;
 		list-style: none;
@@ -49,13 +49,21 @@ const ContactLinks = () => {
 				</li>
 
 				<li>
-					<a href="https://github.com/PengYangGuo" target="_blank">
+					<a
+						href="https://github.com/PengYangGuo"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<Github />
 					</a>
 				</li>
 
 				<li>
-					<a href="https://www.linkedin.com/in/pengyangguo/" target="_blank">
+					<a
+						href="https://www.linkedin.com/in/pengyangguo/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<Linkedin />
 					</a>
 				</li>

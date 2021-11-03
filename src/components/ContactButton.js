@@ -2,8 +2,6 @@ import React from "react"
 import { navigate } from "gatsby"
 import styled from "styled-components"
 
-import device from "../components/device"
-
 const Button = styled.button`
 	display: inline-block;
 	margin-bottom: 1rem;

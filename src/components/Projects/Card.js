@@ -60,14 +60,6 @@ const StyledImg = styled(Img)`
 	}
 `
 
-const Wrapper = styled.figure``
-
-const WrappedImg = props => (
-	<Wrapper>
-		<StyledImg {...props} />
-	</Wrapper>
-)
-
 const Content = styled.div`
 	grid-column: 1 / 3;
 	grid-row: 2 /3;
@@ -108,6 +100,11 @@ const TechList = styled.ul`
 
 	li {
 		list-style: none;
+		display: inline;
+	}
+
+	li:not(:last-child) {
+		margin-right: 5px;
 	}
 
 	@media ${device.mobileS} {
@@ -127,6 +124,7 @@ const TechList = styled.ul`
 `
 
 const IconStyleWrapper = styled.div`
+	padding-left: 1.5rem;
 	@media ${device.mobileS} {
 		grid-column: 2 / 4;
 		grid-row: 3 / 4;

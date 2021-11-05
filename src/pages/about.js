@@ -57,7 +57,8 @@ const AboutPage = () => {
 			<Container>
 				<StyledText>
 					<p>
-						Hello! I'm Peng, a front end developer based in Los Angeles, CA.
+						Hello! I'm Peng, a NFT Full Stack Developer based in Los Angeles,
+						CA.
 					</p>
 					<p>
 						I enjoy creating applications that anyone can use and offer simple
@@ -72,6 +73,7 @@ const AboutPage = () => {
 					<p>Here are a few technologies I've been working with recently:</p>
 
 					<ul>
+						<li>Solidity</li>
 						<li>Next.js</li>
 						<li>React</li>
 						<li>HTML/CSS</li>

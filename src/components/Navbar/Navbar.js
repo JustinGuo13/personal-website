@@ -5,7 +5,7 @@ import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 
 const Navigation = styled.nav`
-	height: 10vh;
+	height: 12vh;
 	display: flex;
 	position: relative;
 	justify-content: space-between;
@@ -90,7 +90,6 @@ const Hamburger = styled.div`
 `
 
 const Navbar = () => {
-	
 	const [navbarOpen, setNavbarOpen] = useState(false)
 
 	return (

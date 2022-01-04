@@ -5,10 +5,9 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 const LogoWrap = styled.div`
 	margin: auto 0;
-	flex: 0 1 36px;
-
+	flex: 0 1 6%;
 	@media (max-width: 768px) and (orientation: landscape) {
-		flex: 0 1 25px;
+		flex: 0 1 6%;
 	}
 `
 const Logo = () => {
@@ -16,7 +15,7 @@ const Logo = () => {
 		query {
 			file(name: { eq: "logo" }, extension: { eq: "png" }) {
 				childImageSharp {
-					fluid(maxWidth: 50, pngQuality: 90) {
+					fluid(maxWidth: 500, pngQuality: 100) {
 						...GatsbyImageSharpFluid
 					}
 				}

@@ -9,9 +9,9 @@ import Image from "../components/image"
 const Container = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	margin: 2rem 15rem;
+	margin: 2rem 30rem;
 	padding: 1rem;
-	align-items: top;
+	align-items: center;
 	justify-items: center;
 	color: #fff;
 `
@@ -57,17 +57,17 @@ const AboutPage = () => {
 			<Container>
 				<StyledText>
 					<p>
-						Hello! I'm Peng, a NFT Full Stack Developer based in Los Angeles,
-						CA.
+						Hello! My name is Peng, and I enjoy creating things that live on the
+						internet. My interest in web development started back in 2018 when I
+						decided to create websites - turns out creating a website was a lot
+						of fun.
 					</p>
 					<p>
-						I enjoy creating applications that anyone can use and offer simple
-						useability.
-						<br /> My goal is to build applications that solve problems with
-						high performance.
+						I enjoy creating applications that anyone can use and that offer
+						simple usability. Currently, I am freelancing as a web developer.
 					</p>
 					<p>
-						I graduated from Cal Poly Pomona in May 2021 and majored in Computer
+						I graduated from Cal Poly Pomona in 2021 and majored in Computer
 						Science.
 					</p>
 					<p>Here are a few technologies I've been working with recently:</p>

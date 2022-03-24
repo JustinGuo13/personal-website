@@ -81,13 +81,14 @@ const Content = styled.div`
 	}
 `
 const Title = styled.h2`
+	color: #34ffdd;
 	font-size: 1.6rem;
 	margin-bottom: 1rem;
 	white-space: normal;
 	overflow: visible;
 `
 const Description = styled.p`
-	font-size: 1rem;
+	font-size: 1.2rem;
 	line-height: 1.5;
 	margin-bottom: 1rem;
 `
@@ -101,6 +102,7 @@ const TechList = styled.ul`
 	li {
 		list-style: none;
 		display: inline;
+		font-size: 0.9rem;
 	}
 
 	li:not(:last-child) {

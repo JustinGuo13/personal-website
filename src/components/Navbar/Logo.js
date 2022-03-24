@@ -3,11 +3,25 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
+import { device } from "../device"
+
 const LogoWrap = styled.div`
 	margin: auto 0;
-	flex: 0 1 6%;
+	flex: 0 1 30px;
 	@media (max-width: 768px) and (orientation: landscape) {
-		flex: 0 1 6%;
+		flex: 0 1 36px;
+	}
+	@media ${device.mobileS} {
+		flex: 0 1 40px;
+	}
+	@media ${device.mobileM} {
+		flex: 0 1 44px;
+	}
+	@media ${device.mobileL} {
+		flex: 0 1 48px;
+	}
+	@media ${device.mobileXL} {
+		flex: 0 1 50px;
 	}
 `
 const Logo = () => {

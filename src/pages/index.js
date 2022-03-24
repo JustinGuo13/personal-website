@@ -19,7 +19,7 @@ const Container = styled.div`
 
 	h1 {
 		font-size: 3rem;
-		color: #23d7ff;
+		color: #34ffdd;
 		letter-spacing: 0.1rem;
 		margin-bottom: 1rem;
 	}
@@ -70,7 +70,7 @@ const IndexPage = () => {
 			<Container>
 				<h4>Hello, my name is</h4>
 				<h1>Peng Yang Guo.</h1>
-				<h3>I'm a NFT Full Stack Developer based in Los Angeles, CA.</h3>
+				<h3>I'm a Front End Developer based in Los Angeles, CA.</h3>
 				<p>Need a developer?</p>
 				<AniLink paintDrip to="/contact" hex="#34ffdd" duration={0.8}>
 					<ContactButton path={`/contact`} description={`Contact me`} />
